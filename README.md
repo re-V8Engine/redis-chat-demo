@@ -281,6 +281,11 @@ yarn start
 yarn install
 yarn start
 ```
+#### Run using Docker Compose
+This method is running redis container also.
+```sh
+docker compose -f run-chat.yaml up
+```
 
 ## Try it out
 
