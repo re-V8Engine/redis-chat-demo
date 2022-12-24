@@ -11,14 +11,16 @@ services:
     volumes:
       - redis-data:/data
   backend:
-    image: v8engine/redis-chat-demo:backend-1.0
+    build: 
+      context: ./
     container_name: redis-chat-backend
     ports:
       - 4000:4000
     networks:
       - redis-network
   frontend:
-    image: v8engine/redis-chat-demo:frontend-1.0
+    build:
+      context: ./client
     container_name: redis-chat-frontend
     ports:
       - 3000:3000
