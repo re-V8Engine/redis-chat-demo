@@ -4,8 +4,8 @@ pipeline {
         stage('buildImages') {
             steps {
                 echo "Building frontend and backend images..."
-                sh "docker build -t redis-chat-demo:backend-1.0 ."
-                sh "docker build -t redis-chat-demo:frontend-1.0 ./client"
+                sh "docker build -t v8engine/redis-chat-demo:backend-1.0 ."
+                sh "docker build -t v8engine/redis-chat-demo:frontend-1.0 ./client"
             }
         }
         stage('pushImages') {
