@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('buildImages') {
             steps {
-		echo "Testing build trigger..."
+		echo "Testing build trigger...."
                 echo "Building frontend and backend images..."
                 sh "docker build -t v8engine/redis-chat-demo:backend-1.0 ."
                 sh "docker build -t v8engine/redis-chat-demo:frontend-1.0 ./client"
