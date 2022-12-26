@@ -9,6 +9,9 @@ def version
 def dockerTag
 pipeline {
     agent any
+    tools {
+        nodejs 'nodejs-19'
+    }
     stages {
         stage('bump version') {
             steps {
