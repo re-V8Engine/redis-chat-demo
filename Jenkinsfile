@@ -17,7 +17,7 @@ pipeline {
             steps {
                 script {
                     echo 'Bumping version...'
-                    sh 'npm version patch'
+                    sh 'npm version patch --git-tag-version false --allow-same-version'
                     def props = readJSON file: 'package.json'
                     version = props.version
                     dockerTag = "$version-$BUILD_NUMBER"
