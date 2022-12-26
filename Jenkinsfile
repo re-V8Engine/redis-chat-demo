@@ -46,7 +46,8 @@ pipeline {
         stage('commit version update') {
             steps {
                 script {
-                    echo 'Push version update to GitHub'
+                    echo 'Testing jenkins commit ignore...'
+                    echo 'Push version update to GitHub...'
                     gitSetRemote('github-token', 'github.com/re-V8Engine/redis-chat-demo.git')
                     gitAddAll()
                     gitCommit "CI: version bump $version"
